@@ -1,0 +1,185 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body & Main Layout */
+  body {
+    font-family: 'Arial', sans-serif;
+    background: #f7f7f7;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  header {
+    background: #ff8c00;
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+  }
+  
+  header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+  }
+  
+  header p {
+    font-size: 1.25rem;
+  }
+  
+  /* Form Section Styles */
+  main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+  
+  form {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-section {
+    margin-bottom: 2rem;
+  }
+  
+  .form-section h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+  
+  label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: #666;
+  }
+  
+  input[type="text"],
+  select {
+    width: 100%;
+    padding: 0.75rem;
+    margin: 0.5rem 0 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  input[type="radio"],
+  input[type="checkbox"] {
+    margin-right: 0.5rem;
+  }
+  
+  button {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    background: #ff8c00;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.25rem;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  button:hover {
+    background: #e07b00;
+  }
+  
+  /* Smoothie Image & Preview */
+  #smoothiePreview img {
+    width: 100%;
+    max-width: 350px;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  #smoothiePreview img:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Ingredients Grid */
+  .ingredients-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+  }
+  
+  .ingredients-grid label {
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+    color: #555;
+  }
+  
+  .ingredients-grid img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    margin-right: 10px;
+    border-radius: 5px;
+  }
+  
+  /* Order Summary Section */
+  #orderSummary {
+    margin-top: 2rem;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  #orderDetails {
+    margin-top: 1.5rem;
+    font-size: 1.1rem;
+  }
+  
+  #orderDetails p {
+    margin-bottom: 0.5rem;
+    color: #333;
+  }
+  
+  #orderDetails strong {
+    color: #ff8c00;
+  }
+  
+  /* Media Queries for Responsiveness */
+  @media (max-width: 768px) {
+    header h1 {
+      font-size: 2.5rem;
+    }
+  
+    .form-section h2 {
+      font-size: 1.75rem;
+    }
+  
+    .ingredients-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    #smoothiePreview img {
+      max-width: 250px;
+    }
+  
+    button {
+      font-size: 1.1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .ingredients-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    button {
+      font-size: 1.2rem;
+    }
+  }
+  

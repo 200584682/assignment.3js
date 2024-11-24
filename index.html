@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced Smoothie Builder</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Create Your Dream Smoothie</h1>
+    <p>Choose your favorite ingredients and customize your smoothie just the way you like!</p>
+  </header>
+
+  <main>
+    <form id="smoothieForm">
+      <section class="form-section">
+        <h2>Basic Details</h2>
+        <label for="customerName">Your Name:</label>
+        <input type="text" id="customerName" name="customerName" placeholder="Enter your name" required>
+
+        <label for="size">Smoothie Size:</label>
+        <select id="size" name="size" required>
+          <option value="small">Small ($5.00)</option>
+          <option value="medium">Medium ($7.50)</option>
+          <option value="large">Large ($10.00)</option>
+        </select>
+      </section>
+
+      <section class="form-section">
+        <h2>Choose Your Base</h2>
+        <div class="options">
+          <label><input type="radio" name="base" value="Milk" required> Milk</label>
+          <label><input type="radio" name="base" value="Almond Milk"> Almond Milk</label>
+          <label><input type="radio" name="base" value="Coconut Water"> Coconut Water</label>
+        </div>
+      </section>
+
+      <section class="form-section">
+        <h2>Pick Your Ingredients ($1 each)</h2>
+        <div class="ingredients-grid">
+          <label><input type="checkbox" name="ingredients" value="Banana"> <img src="images/img 2.jpg" alt="Banana"> Banana</label>
+          <label><input type="checkbox" name="ingredients" value="Strawberry"> <img src="images/img 1.jpg" alt="Strawberry"> Strawberry</label>
+          <label><input type="checkbox" name="ingredients" value="Blueberry"> <img src="images/img 3.jpg" alt="Blueberry"> Blueberry</label>
+          <label><input type="checkbox" name="ingredients" value="Kale"> <img src="images/img 5.jpg" alt="Kale"> Kale</label>
+          <label><input type="checkbox" name="ingredients" value="Mango"> <img src="images/img 4.jpg" alt="Mango"> Mango</label>
+        </div>
+      </section>
+
+      <section class="form-section">
+        <h2>Extras</h2>
+        <label><input type="checkbox" name="extras" value="Ice"> Add Ice</label>
+        <label><input type="checkbox" name="extras" value="Protein Powder"> Add Protein Powder ($2)</label>
+
+        <label for="blendLevel">Blend Level:</label>
+        <select id="blendLevel" name="blendLevel">
+          <option value="Smooth">Smooth</option>
+          <option value="Chunky">Chunky</option>
+        </select>
+      </section>
+
+      <button type="button" id="orderButton">Order Smoothie</button>
+    </form>
+
+    <section id="orderSummary" class="summary-section">
+      <h2>Your Smoothie</h2>
+      <div id="smoothiePreview">
+        <img src="images/default-smoothie.png" alt="Smoothie preview" id="smoothieImage">
+      </div>
+      <div id="orderDetails"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
